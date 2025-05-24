@@ -1,0 +1,73 @@
+ @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap");
+
+      .font-playfair {
+        font-family: "Playfair Display", serif;
+      }
+      .font-inter {
+        font-family: "Inter", sans-serif;
+      }
+
+      .hero-bg {
+        background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.35)),
+          url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .menu-item-hover {
+        transition: transform 0.3s cubic-bezier(0.4, 2, 0.6, 1),
+          box-shadow 0.3s cubic-bezier(0.4, 2, 0.6, 1),
+          border 0.3s cubic-bezier(0.4, 2, 0.6, 1);
+        border: 2px solid transparent;
+        position: relative;
+        overflow: hidden;
+      }
+      .menu-item-hover:hover {
+        transform: translateY(-8px) scale(1.06) rotate(-1deg);
+        box-shadow: 0 24px 40px -8px rgba(255, 140, 0, 0.18),
+          0 8px 24px -8px rgba(0, 0, 0, 0.1);
+        border: 2px solid #ff8800;
+        z-index: 2;
+      }
+      .menu-item-hover img {
+        transition: transform 0.4s cubic-bezier(0.4, 2, 0.6, 1);
+      }
+      .menu-item-hover:hover img {
+        transform: scale(1.08) rotate(-1deg);
+      }
+
+      .scroll-smooth {
+        scroll-behavior: smooth;
+      }
+
+      .navbar-scroll {
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.95);
+      }
+
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px) scale(0.96);
+        transition: all 0.6s cubic-bezier(0.4, 2, 0.6, 1);
+        will-change: opacity, transform;
+      }
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        animation: pop-in 0.6s cubic-bezier(0.4, 2, 0.6, 1);
+      }
+      @keyframes pop-in {
+        0% {
+          opacity: 0;
+          transform: translateY(30px) scale(0.96);
+        }
+        80% {
+          opacity: 1;
+          transform: translateY(-4px) scale(1.03);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
